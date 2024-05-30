@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Proyecto_DAW1:Aner_Monzon</title>
+<link href="../CSS/EstilosProyectofinal.css" rel="stylesheet" type="text/css">
+	<style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .tab {
+            background-color: #E6E6FA;
+            padding: 10px;
+            cursor: pointer;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .exercise-card {
+            background-color: #E6E6FA;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: left;
+        }
+        .exercise-card img {
+            max-width: 100px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .exercise-card h3 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        .exercise-card p {
+            margin: 0;
+        }
+    </style>
+</head>
+	
+<body>
+	<div id="contenedorprincipal">
+		<div id="cabezera">
+			<div clas="caja1">
+				<img id="logo" src="../IMAGENES/LogoUK.png" width="100" height="100"/>
+			</div>
+			<div id="caja2">
+				<h1 id="titulo">Uribe Kosta Astintzen!</h1>
+				<h2 id="slogan">Herritik, herriarentzat</h2>
+				<nav>
+					<a href="../index.html">Inicio</a>
+        			<a href="conciertos.html">Conciertos</a>
+        			<a href="registro.html">Registro</a>
+        			<a href="resumenejercicios.html">Resumen ejercicios</a>
+    			</nav>
+			</div>
+			<div class="caja1">
+				
+			</div>
+		</div>
+		<div id="cuerpo">
+			<audio autoplay loop>
+        		<source src="background-music.mp3" type="audio/mpeg">
+    		</audio>
+    	<div class="tabs">
+        	<div class="tab" onclick="showTab('sin-css')">Ejercicios sin CSS</div>
+        	<div class="tab" onclick="showTab('con-css')">Ejercicios con CSS</div>
+    	</div>
+    	<div id="sin-css" class="tab-content">
+        	<div class="exercise-card">
+            	<img src="image1.png" alt="Ejercicio 1">
+            	<h3>Ejercicio 1</h3>
+            	<p>Descripción breve del ejercicio 1.</p>
+        	</div>
+        <!-- More exercise cards -->
+    	</div>
+    	<div id="con-css" class="tab-content">
+        	<div class="exercise-card">
+            	<img src="image5.png" alt="Ejercicio 5">
+            	<h3>Ejercicio 5</h3>
+            	<p>Descripción breve del ejercicio 5.</p>
+        	</div>
+        <!-- More exercise cards -->
+    	</div>
+    	<script>
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(function(tab) {
+                tab.classList.remove('active');
+            });
+            document.getElementById(tabId).classList.add('active');
+			}
+    	</script>
+		</div>
+		<div id="pie">
+			<div class="redes">
+				<img src="../IMAGENES/redes1.png" alt="" usemap="#redes" style="border-style:none" />
+			</div>
+			<map id="redes" name="redes">
+				<area shape="circle" alt="Facebook" coords="30,29,25" href="https://www.facebook.com/?locale=es_ES" target="_blank" title="Facebook" />
+				<area shape="circle" alt="Instagram" coords="98,29,26" href="https://www.instagram.com/uk.astintzen/" target="_blank" title="Instagram" />
+				<area shape="circle" alt="Twitter" coords="166,29,26" href="https://twitter.com/" target="_blank" title="Twitter" />
+				<area shape="default" nohref="nohref" alt="" />
+			</map>
+			<div id="tiempo">
+				<div id="cont_106f124d536d4194ceb49292cc3baedb"><script type="text/javascript" async src="https://www.tiempo.com/wid_loader/106f124d536d4194ceb49292cc3baedb"></script></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
